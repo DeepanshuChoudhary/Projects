@@ -32,6 +32,12 @@ button {
     border: none;
     background-color: #333;
     color: #fff;
+    border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 16px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
