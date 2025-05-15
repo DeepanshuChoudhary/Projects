@@ -1,3 +1,4 @@
+/* Apply common style to all elements */
 * {
     margin: 0;
     padding: 0;
@@ -6,11 +7,13 @@
     color: #fff;
 }
 
+/* make sure full screen height and width covers entire drvice */
 html, body {
     height: 100%;
     width: 100%;
 }
 
+/* Navigation bar styling */
 #nav {
     height: 145px;
     width: 100%;
@@ -25,13 +28,50 @@ html, body {
     z-index: 99;
 }
 
+/* Logo inside navbar */
 #nav img {
     height: 75px;
 }
 
+/* full screen video background */
 video {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    position: fixed;
+    object-fit: cover; /* Crop video to fully cover the screen */
+    position: fixed; /* Fixed behind everything */
+}
+
+/* landing page section */
+#main {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.326);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 140px;
+    font-weight: 900;
+}
+
+#page1 h2 {
+    font-size: 33px; 
+    font-weight: 900;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 20px;
+    font-weight: 500;
+    width: 40%;
 }
