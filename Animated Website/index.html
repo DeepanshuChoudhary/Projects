@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Montserrat font added from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
     
+    <!-- Navigation bar with logo and menu links -->
     <div id="nav">
         <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="logo">
         <h4>TOPTRACER RANGE</h4>
@@ -19,15 +22,45 @@
         <h4>EVENTS</h4>
     </div>    
 
+    <div id="cursor"></div>
+
+    <div id="cursorBlur"></div>
+
+    <!-- Fullscreen background video -->
     <video src="/Project/Animated Website/Assests/hero.mp4" autoplay muted loop></video>
 
+    <!-- main content area -->
     <div id="main">
         <div id="page1">
             <h1>EAT. DRINK. PLAY.</h1>
             <h2>WELCOME TO SIDCUP FAMILY GOLF!</h2>
             <p>Sidcup Family Golf is a Toptracer driving range and crazy golf venue in Sidcup, South East London. Passionate about technology, player development and making golf fun and accessible to everyone.</p>
         </div>
+
+        <div id="page2">
+            <!-- 
+            <marquee> tag is used to create a scrolling (sliding) text animation effect. It scrolls the content horizontally or vertically inside the page.
+                ❗ Note: This tag is outdated (deprecated in HTML5), but still works in most browsers.
+                ✔️ Easy way to animate text like a news ticker without CSS or JavaScript.
+                
+            Example: Use behavior="scroll" and direction="left" for smooth horizontal slide.
+            <marquee behavior="" direction="">
+                TOPTRACER RANGE
+                GOLF LESSONS
+                ADVENTURE GOLF
+                CAFE
+                EVENTS
+            </marquee>
+-->
+        </div>
     </div>
 
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="script.js"></script>
 </body>
 </html>

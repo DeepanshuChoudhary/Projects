@@ -33,12 +33,32 @@ html, body {
     height: 75px;
 }
 
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursorBlur {
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e1e;
+    position: fixed;
+    z-index: 9;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
 /* full screen video background */
 video {
     height: 100%;
     width: 100%;
     object-fit: cover; /* Crop video to fully cover the screen */
     position: fixed; /* Fixed behind everything */
+    z-index: -1;
 }
 
 /* landing page section */
@@ -56,22 +76,42 @@ video {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    z-index: 10;
 }
 
 #page1 h1 {
-    font-size: 140px;
+    font-size: 160px;
     font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 2px #95C11E;
+    z-index: -1;
 }
 
 #page1 h2 {
-    font-size: 33px; 
+    font-size: 35px; 
     font-weight: 900;
     margin-top: 10px;
     margin-bottom: 20px;
 }
 
 #page1 p {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500;
     width: 40%;
+}
+
+/* page2 */
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
 }
