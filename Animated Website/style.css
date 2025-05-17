@@ -39,13 +39,13 @@ html, body {
     background-color: #95C11E;
     border-radius: 50%;
     position: fixed;
-    z-index: 99;
+    z-index: 9;
 }
 
 #cursorBlur {
     height: 400px;
     width: 400px;
-    background-color: #96c11e1e;
+    background-color: #96c11e33;
     position: fixed;
     z-index: 9;
     border-radius: 50%;
@@ -111,7 +111,298 @@ video {
 /* page2 */
 
 #page2 {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     z-index: 10;
+}
+
+#scroller {
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+#scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    /* @keyframe scroll */
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h4 {
+    display: inline-block;
+    font-weight: 900;
+    font-size: 120px;
+    font-family: gilroy;
+    margin-right: 10px;
+    color: transparent;
+    -webkit-text-stroke: 2px #95C11E;
+    transition: all linear 0.2s;
+}
+
+#scroller h4:hover {
+    color: #95C11E !important;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%)
+    }
+}
+
+#about-us {
+    margin: 100px 0;
+    height: 40vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 110px;
+    position: relative;
+}
+
+#about-us img {
+    height: 220px;
+    width: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 45%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+#about-us-in p {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+
+/* card container */
+
+#cards-container {
+    /* background-color: red; */
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+    gap: 30px;
+}
+
+.card {
+    height: 80%;
+    width: 27%;
+    /* background-color: blue; */
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: all ease 0.5s;
+}
+
+#card1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    /* padding: 170px 50px 50px 50px; */
+    padding: 30px;
+    padding-top: 170px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    /* transform: rotate3d(-1,1,0,15deg); */
+    transform:scale(1.05)
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 38px;
+    font-weight: 800;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    color: #000;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#green-div {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    background: linear-gradient(to left bottom,#33ff0a, #95C11E);
+}
+
+#green-div h4 {
+    text-transform: uppercase;
+    font-size: 27px;
+    width: 45%;
+    line-height: 40px;
+    color: #000;
+    font-weight: 800;
+}
+
+#green-div img {
+    height: 100%;
+    object-fit: cover;
+    width: 12%;
+}
+
+
+/* page3 */
+
+#page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#page3 > p {
+    font-size: 35px;
+    width: 55%;
+    line-height: 50px;
+    font-weight: 800;
+    text-align: center;
+}
+
+#page3 img {
+    position: absolute;
+    height: 60px;
+}
+
+#page3 #colon1 {
+    left: 15%;
+    top: 30%;
+}
+
+#page3 #colon2 {
+    bottom: 30%;
+    right: 15%;
+}
+
+
+/* page 4 */
+
+#page4 {
+    height: 30vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    position: relative;
+}
+
+#page4 h1 {
+    font-size: 100px;
+    position: absolute;
+    color: #000;
+    text-transform: uppercase;
+    top: -12%;
+    font-weight: 900;
+    font-family: gilroy;
+    -webkit-text-stroke: 2px #33ff0a;
+}
+
+.elem {
+    height: 70%;
+    width: 26%;
+    overflow: hidden;
+    border-radius: 20px;
+    position: relative;
+    /* transition: all 0.5s ease; */
+}
+
+.elem h2{
+    height: 100%;
+    width: 100%;
+    background-color: #95C11E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #000;
+    font-weight: 800;
+    position: absolute;
+    z-index: 10;
+    transition: all 0.5s ease;
+    text-transform: uppercase;
+}
+
+.elem:hover h2 {
+    color: #fff;
+    background-color: transparent;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.1;
+    transition: 0.5s ease all;
+}
+
+.elem:hover img {
+    scale: 1;
+}
+
+
+/* footer */
+
+#footer {
+    height: 40vh;
+    width: 100%;
+    background: linear-gradient(to left bottom,#33ff0a, #95C11E);
 }
