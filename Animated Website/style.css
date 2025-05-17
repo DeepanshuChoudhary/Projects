@@ -13,6 +13,11 @@ html, body {
     width: 100%;
 }
 
+body::selection {
+    background-color: #fff;
+    color: #95C11E;
+}
+
 /* Navigation bar styling */
 #nav {
     height: 145px;
@@ -106,6 +111,31 @@ video {
     font-size: 25px;
     font-weight: 500;
     width: 40%;
+}
+
+#page1 #arrow {
+    height: 250px;
+    width: 250px;
+    background-color: transparent;
+    border: 2px solid #95C11E;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    left: -3%;
+    bottom: 0%;
+    transition: all 0.2s ease;
+}
+
+#page1 #arrow:hover {
+    background-color: #95C11E;
+    scale: 0.4;
+}
+
+#page1 #arrow i {
+    font-size: 50px;
+    font-weight: 100;
 }
 
 /* page2 */
@@ -405,4 +435,69 @@ video {
     height: 40vh;
     width: 100%;
     background: linear-gradient(to left bottom,#33ff0a, #95C11E);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 150px;
+    padding: 0 150px;
+}
+
+#footer > img {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 15%;
+    /* z-index: 0; */
+    object-fit: cover;
+}
+
+#footer1 img {
+    height: 120px;
+    margin-bottom: 50px;
+}
+
+#footer i {
+    font-size: 35px;
+    color: #000;
+}
+
+#footer1, #footer2, #footer3, #footer4 {
+    width: fit-content;
+    position: relative;
+    z-index: 20;
+    /* background-color: red; */
+}
+
+#footer2 h3 {
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 750;
+}
+
+#footer3 h3 {
+    font-size: 30px;
+    white-space: nowrap;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 750;
+}
+
+#footer4 p {
+    font-size: 18px;
+    color: #000;
+    width: 200px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#footer4 h3 {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 750;
 }
