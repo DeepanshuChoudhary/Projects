@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f9f9f9;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    display: flex;
+    gap: 10px;
+}
+
+.square {
+    opacity: 1;
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: ease 0.8s;
+}
+
+.box:hover .square:not(:hover){
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1.00);
+}
